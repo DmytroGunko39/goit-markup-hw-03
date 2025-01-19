@@ -24,15 +24,21 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
 /* common rule */
 
 .container {
   max-width: 1158px;
-  padding: 0 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/*<-------------header-sectione-adress----------->*/
+/*<-------------logo----------->*/
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -43,6 +49,8 @@ a {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+
+/*<-------------page-header----------->*/
 
 .page-header {
   border-bottom: 1px solid #e7e9fc;
@@ -71,7 +79,7 @@ a {
 .nav-list {
   display: flex;
   align-items: center;
-  gap: 40px;
+  column-gap: 40px;
 }
 
 .nav-link {
@@ -110,19 +118,31 @@ a {
   color: #404bbf;
 }
 
-/*<-------------sectione-main----------->*/
+/*<-------------main-sectione-Hero----------->*/
 
-.main-section {
+.hero {
   background-color: #2e2f42;
+  max-width: 1440px;
+  color: #ffffff;
+  padding: 188px 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
 }
 
 .main-title {
+  width: 496px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
 }
 
 .main-button {
@@ -131,8 +151,13 @@ a {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: #fff;
   cursor: pointer;
+  color: inherit;
+  border: none;
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
 }
 
 .main-button:hover,
@@ -142,14 +167,30 @@ a {
 
 /*<-------------sectione-quote 3----------->*/
 
-/* .section-quote {
+.section-quote {
+  padding: 120px 0;
 }
 
 .section-list {
+  display: flex;
+  gap: 24px;
 }
 
 .section-item {
-} */
+  width: calc((100% - 72px) / 4);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 .quote-title {
   font-weight: 500;
@@ -170,9 +211,11 @@ a {
 
 .section-team {
   background-color: #f4f4fd;
+  padding: 120px 0;
 }
 
 .team-desc {
+  padding-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -182,15 +225,25 @@ a {
   text-transform: capitalize;
 }
 
-/* .team-list {
-} */
+.team-list {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  gap: 24px;
+}
 
 .team-item {
   background-color: #ffffff;
+  width: calc((100% - 72px) / 4);
+  border-radius: 0 0 4px 4px;
 }
 
-/* .team-img {
-} */
+.team-img {
+}
+
+.cart-content {
+  padding: 32px 0;
+}
 
 .team-name {
   font-weight: 500;
@@ -198,6 +251,8 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .team-role {
@@ -205,12 +260,14 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
+  text-align: center;
 }
 
 /*<-------------sectione-Portfolio 5----------->*/
 
-/* .section-portfolio {
-} */
+.section-portfolio {
+  padding: 120px 156px;
+}
 .portfolio-title {
   font-weight: 700;
   font-size: 36px;
@@ -219,20 +276,35 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
 }
 
-/* .portfolio-list {
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
 }
+
 .portfolio-item {
+  width: calc((100% -7 2px) / 4);
 }
+
 .portfolio-img {
-} */
+}
+
+.portfolio-content {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  padding-left: 16px;
+  /* text-align: left; */
+}
 .widget-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .widget-subtitle {
   font-size: 16px;
@@ -244,6 +316,7 @@ a {
 
 .page-footer {
   background-color: #2e2f42;
+  padding: 100px 0 100px 156px;
 }
 
 .footer-text {
@@ -254,4 +327,8 @@ a {
 }
 .footer-logo .logo-part {
   color: #f4f4fd;
+}
+.footer-text {
+  margin-top: 16px;
+  max-width: 264px;
 }
